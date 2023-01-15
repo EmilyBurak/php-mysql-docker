@@ -1,6 +1,6 @@
 <?php 
-// $mysqli = new mysqli("database", "admin", "12dlql*41");
-define('DB_SERVER', 'database');
+// $servername= "localhost";
+define('DB_SERVER', 'db');
 define('DB_USERNAME', 'admin');
 define('DB_PASSWORD', 'pass');
 define('DB_DATABASE', 'test');

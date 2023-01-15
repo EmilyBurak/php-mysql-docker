@@ -3,7 +3,7 @@ version: "3"
 services:
   db:
     image: mysql:5.7
-    container_name: database
+    container_name: db
     volumes:
       - ./docker/:/etc/mysql/conf.d
       - ./docker/:/docker-entrypoint-initdb.d
@@ -16,6 +16,7 @@ services:
       - "3306:3306"
   php:
     build: ./app
+    command: php ./script.php > result
     container_name: php-script-test
     depends_on:
       - "db"
